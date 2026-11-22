@@ -1,0 +1,18 @@
+name: JavrockAntiFreecam
+version: 1.0.0
+main: id.javrock.antifreecam.JavrockAntiFreecamPlugin
+api-version: '1.21'
+author: Javrock SMP
+description: Mencegah penyalahgunaan freecam di dalam cave/blok tertutup dan mengizinkan kembali saat di permukaan/atas cave.
+commands:
+  javrockantifreecam:
+    description: Kelola plugin JavrockAntiFreecam
+    aliases: [jaf, antifreecam]
+    permission: javrockantifreecam.admin
+permissions:
+  javrockantifreecam.admin:
+    description: Akses perintah reload dan status plugin
+    default: op
+  javrockantifreecam.bypass:
+    description: Bypass deteksi anti-freecam
+    default: false

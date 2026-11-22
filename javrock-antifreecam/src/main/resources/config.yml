@@ -1,0 +1,45 @@
+# Konfigurasi JavrockAntiFreecam (Paper 1.21.11)
+# Gunakan kode warna legacy (&1, &9, &b, &3, &c, &f, &7, &8) dan font small caps sesuai tema Javrock SMP.
+
+settings:
+  # Interval pengecekan posisi/gerakan dalam tick (2 tick = 0.1 detik)
+  check-interval-ticks: 2
+
+  # Batas maksimum jarak paket pergerakan dalam 1 interval tick sebelum dianggap melayang/freecam
+  max-packet-distance: 2.2
+
+  # Durasi cooldown peringatan & penarikan posisi (dalam milidetik) agar tidak spam
+  action-cooldown-ms: 600
+
+  # Aktifkan efek Blindness + Darkness saat kamera/posisi terdeteksi di dalam cave atau tertutup blok
+  blind-in-enclosed-space: true
+
+  # Izinkan mode freecam/pengamatan saat berada di udara terbuka / atas cave
+  allow-above-cave: true
+
+  # Deteksi jika pemain berada di bawah permukaan / area gua tertutup
+  cave-detection:
+    enabled: true
+    # Cek apakah ada blok solid di atas kepala hingga batas tinggi ini
+    ceiling-check-height: 8
+    # Jika di bawah Y ini dan tidak melihat langit (sky light rendah), dianggap area gua/bawah tanah
+    underground-y-threshold: 58
+
+  # Posisi anchor terakhir yang aman akan diperbarui jika pemain berada di ruang terbuka/atas cave
+  anchor-update:
+    require-open-space: true
+
+  # Tindakan saat terdeteksi freecam di area terlarang (cave/tertutup blok)
+  punishment:
+    # Snap kembali pemain ke posisi anchor valid terakhir
+    snap-back: true
+    # Berikan efek gelap (Blindness & Darkness) saat layar tertutup blok/gua
+    apply-darkness: true
+    # Kirim pesan peringatan ke chat/actionbar
+    send-warning: true
+
+messages:
+  prefix: '&9&lᴊᴀᴠʀᴏᴄᴋ &8» '
+  blocked-in-cave: '&cꜰʀᴇᴇᴄᴀᴍ ᴛɪᴅᴀᴋ ᴅɪɪᴢɪɴᴋᴀɴ ᴅɪ ᴅᴀʟᴀᴍ ᴄᴀᴠᴇ ᴀᴛᴀᴜ ʀᴜᴀɴɢ ᴛᴇʀᴛᴜᴛᴜᴘ! ɴᴀɪᴋ ᴋᴇ ᴀᴛᴀꜱ ᴄᴀᴠᴇ ᴜɴᴛᴜᴋ ᴍᴇɴɢɢᴜɴᴀᴋᴀɴɴʏᴀ.'
+  actionbar-dark: '&8[&9&lᴊᴀᴠʀᴏᴄᴋ&8] &7ʟᴀʏᴀʀ ɢᴇʟᴀᴘ: ᴋᴀᴍᴇʀᴀ ᴛᴇʀᴛᴜᴛᴜᴘ ʙʟᴏᴋ / ᴅɪ ᴅᴀʟᴀᴍ ᴄᴀᴠᴇ'
+  reloaded: '&bᴋᴏɴꜰɪɢᴜʀᴀꜱɪ ᴊᴀᴠʀᴏᴄᴋᴀɴᴛɪꜰʀᴇᴇᴄᴀᴍ ʙᴇʀʜᴀꜱɪʟ ᴅɪᴍᴜᴀᴛ ᴜʟᴀɴɢ.'
